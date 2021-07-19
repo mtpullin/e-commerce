@@ -15,6 +15,10 @@
   ## Installation
   download files from github make sure to have mysql and sequelize installed then navagate to the folder using the command line and you should be able to just run npm start. 
 
+link to walkthrough video :
+
+https://www.youtube.com/watch?v=aIE5XiXeQO8
+
   ## Credits
    
 
