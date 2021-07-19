@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
   })
   .then(dbCategorydata => {
     if(!dbCategorydata){
-      res.status(400).json({message: 'no product found'})
+      res.status(400).json({message: 'no category found'})
       return;
     }
     res.json(dbCategorydata);
@@ -39,7 +39,7 @@ router.get('/:id', (req, res) => {
   })
   .then(dbCategorydata => {
     if(!dbCategorydata){
-      res.status(400).json({message: 'no product found'})
+      res.status(400).json({message: 'no category found'})
       return;
     }
     res.json(dbCategorydata);

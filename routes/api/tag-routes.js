@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
   })
   .then(dbTagdata => {
     if(!dbTagdata){
-      res.status(400).json({message: 'no product found'})
+      res.status(400).json({message: 'no tag found'})
       return;
     }
     res.json(dbTagdata);
@@ -39,7 +39,7 @@ router.get('/:id', (req, res) => {
   })
   .then(dbTagdata => {
     if(!dbTagdata){
-      res.status(400).json({message: 'no product found'})
+      res.status(400).json({message: 'no tag found'})
       return;
     }
     res.json(dbTagdata);
@@ -52,7 +52,7 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
   Tag.create({
-    tag_name: req.body.category_name
+    tag_name: req.body.tag_name
   })
   .then(dbTagData => res.json(dbTagData))
   .catch(err => {
@@ -70,7 +70,7 @@ router.put('/:id', (req, res) => {
   })
   .then(dbTagData => {
     if(!dbTagData[0]) {
-      res.status(404).json({message: 'no category found'})
+      res.status(404).json({message: 'no tag found'})
       return;
     }
     res.json(dbTagData)
@@ -89,7 +89,7 @@ router.delete('/:id', (req, res) => {
   })
   .then(dbTagData => {
     if(!dbTagData){
-      res.status(404).json({message: 'no category found'})
+      res.status(404).json({message: 'no tag found'})
       return;
     }
     res.json(dbTagData);
